@@ -10,9 +10,9 @@ export default function Home() {
       <Title />
 
       <p className="flex items-center justify-center ">
-        Description: "We're Devinger, where we craft your vision, perfect every pixel,
+        We&apos;re Devinger, where we craft your vision, perfect every pixel,
         and launch impactful online experiences.
-        Your dreams, our reality."
+        Your dreams, our reality.
       </p>
 
       <CallToAction />
