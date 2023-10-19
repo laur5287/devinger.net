@@ -47,7 +47,7 @@ const Title = () => {
 
                     )}
                 >
-                    <span className="text-[5em] font-bold text-transparent ">LAUNCH.</span>
+                    <span className="text-[5em] font-bold text-transparent ">LAUNCH</span>
                 </div>
             </div>
         </>
