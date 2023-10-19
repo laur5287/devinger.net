@@ -21,7 +21,7 @@ const Title = () => {
         }
         const intervalId = setInterval(rotateWords, 2000)
         return () => clearInterval(intervalId)
-    }, [])
+    },)
 
     return (
         <>
