@@ -4,20 +4,19 @@ import { Button } from "./ui/button";
 
 
 const NavBar = () => (
-    <nav className="flex justify-between items-center p-3 ">
-        <div id='wrapper_left' className="flex gap-2">
-            <span className="">logo</span>
-            <span className="">Devinger</span>
-        </div>
-        <div className="flex-grow"></div>
-        <div id='right-wrapper' className="flex gap-2">
-            <ThemeToggle />
-            <Button variant='ghost'>
-                <Menu />
+	<nav className="sticky z-10 flex items-center justify-between p-4 mx-auto shadow-sm rounded-xl md:w-2/3 top-10 backdrop-blur-2xl ">
+		<div id='wrapper_left' className="flex gap-2">
+			<span className="font-sans text-xl font-extrabold">DEV</span>
+		</div>
+		<span className="flex-grow"></span>
+		<div id='right-wrapper' className="flex gap-2">
+			<ThemeToggle />
+			<Button variant='ghost'>
+				<Menu />
 
-            </Button>
-        </div>
+			</Button>
+		</div>
 
-    </nav>
+	</nav>
 )
 export default NavBar

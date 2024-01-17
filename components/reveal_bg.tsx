@@ -1,23 +1,18 @@
 'use client'
-import { cn } from "@/lib/utils"
-import { useEffect, useState } from "react";
+import { Skeleton as SkeletonReact } from "@/components/ui/skeleton"
 
-const Reveal = () => {
 
-    const [showBackground, setShowBackground] = useState(false);
+const Skeleton = () => {
 
-    useEffect(() => {
-        setShowBackground(true);
-    }, []);
+	return (
+		<div className="flex items-center space-x-4">
+			<SkeletonReact className="w-12 h-12 rounded-full" />
+			<div className="space-y-2">
+				<SkeletonReact className="h-4 w-[250px]" />
+				<SkeletonReact className="h-4 w-[200px]" />
+			</div>
+		</div>
 
-    return (
-        <div
-            className={cn(
-                " bg-red-950 dark:bg-blue-800 fixed inset-0 transition-opacity duration-1000",
-                !showBackground ? "opacity-100" : "opacity-0 hidden"
-            )}
-        />
-
-    )
+	)
 }
-export default Reveal
+export default Skeleton
