@@ -29,7 +29,7 @@ export default function RootLayout({
 	return (
 		<html suppressHydrationWarning lang="en">
 			<body className={cn(
-				"min-h-screen relative  dark:bg-blend-multiply light:bg-blend-saturation flex flex-col font-sans antialiased bg-gradient-to-br dark:from-secondary dark:from-30 from-primary/20 from-30  to-green-500   dark:to-muted to-85 dark:backdrop-blur-sm",
+				"min-h-screen relative   flex flex-col font-sans antialiased  from-secondary from-10% to-70% to-muted   bg-gradient-to-tr dark:from-muted dark:to-transparent ",
 
 				fontSans.variable
 			)} >

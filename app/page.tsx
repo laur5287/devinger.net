@@ -26,7 +26,7 @@ export default function Home() {
 			<section className="relative flex flex-col gap-4" id="projects">
 				{/* <div className="flex flex-col overflow-visible justify-self-start " id="wrapper"> */}
 				{/* <Divider className='overflow-visible bg-transparent bg-cover fill-background' /> */}
-				<div className="font-bold text-transparent align-baseline whitespace-nowrap text-stroke text-9xl"><span className='inline-block animate-ticker'>Projects</span></div>
+				<div className="overflow-hidden font-bold text-transparent align-baseline whitespace-nowrap text-stroke text-9xl"><span className='inline-block animate-ticker'>Projects</span></div>
 
 				{/* </div> */}
 				<CarouselExample />

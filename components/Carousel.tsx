@@ -46,7 +46,7 @@ export const CarouselExample = () => {
 				align: "center",
 				loop: true,
 			}}
-			className="relative w-[90vw] max-w-2/3 mx-auto "
+			className="relative w-[90vw] max-w-fit mx-auto "
 			id='carousel'
 
 		>
