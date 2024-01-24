@@ -31,9 +31,9 @@ const Title = () => {
 				>
 					<div className="flex items-center gap-3 ">
 						<span className="text-[5em] font-extrabold tracking-tight text-transparent  ">IMAGINE</span>
-						<span id='image-wrapper' className="relative w-[4em] h-[5em] ">
-							{/* <Rocket color="currentColor" /> */}
-						</span>
+						{/* <span id='image-wrapper' className="relative w-[4em] h-[5em] ">
+							<Rocket color="currentColor" />
+						</span> */}
 					</div>
 				</div>
 
@@ -44,10 +44,10 @@ const Title = () => {
 				>
 					<div className="flex items-center gap-3">
 						<span className="text-[5em] font-extrabold tracking-tight text-transparent ">BUILD</span>
-						<span id='image-wrapper' className="relative w-[4em] h-[5em] ">
-							{/* <Rocket color="currentColor" /> */}
+						{/* <span id='image-wrapper' className="relative w-[4em] h-[5em] ">
+							<Rocket color="currentColor" />
 
-						</span>
+						</span> */}
 					</div>
 
 				</div>
@@ -58,9 +58,9 @@ const Title = () => {
 				>
 					<div className="flex items-center gap-3">
 						<span className="text-[5em] font-extrabold tracking-tight text-transparent ">LAUNCH</span>
-						<span id='image-wrapper' className="relative w-[4em] h-[5em] ">
-							{/* <Rocket color="currentColor" /> */}
-						</span>
+						{/* <span id='image-wrapper' className="relative w-[4em] h-[5em] ">
+							<Rocket color="currentColor" />
+						</span> */}
 					</div>
 				</div>
 			</div>

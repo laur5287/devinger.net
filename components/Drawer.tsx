@@ -1,4 +1,4 @@
-
+'use client'
 import { cn } from "@/lib/utils"
 import { useMediaQuery } from 'usehooks-ts'
 
@@ -9,6 +9,8 @@ import {
 	DialogDescription,
 	DialogHeader,
 	DialogTitle,
+	DialogPortal,
+	DialogOverlay,
 	DialogTrigger,
 } from "@/components/ui/dialog"
 import {
@@ -19,11 +21,12 @@ import {
 	DrawerFooter,
 	DrawerHeader,
 	DrawerTitle,
+
 	DrawerTrigger,
 } from "@/components/ui/drawer"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 type DrawerDialogProps = {
 	children?: React.ReactNode;
@@ -34,26 +37,48 @@ type DrawerDialogProps = {
 
 export function DrawerDialog({ children, data, content, className }: DrawerDialogProps) {
 	const [open, setOpen] = useState(false)
+	const [container, setContainer] = useState<HTMLDivElement | null>(null);
 	const isDesktop = useMediaQuery("(min-width: 768px)")
+	useEffect(() => {
+		console.log(isDesktop)
+
+	}, [isDesktop])
+
+	useEffect(() => {
+		setContainer(document.body as HTMLDivElement | null); // Set the container to document.body or any other desired container
+		console.log(isDesktop);
+	}, [isDesktop]);
+
 
 	if (isDesktop) {
 		return (
-			<Dialog open={open} onOpenChange={setOpen}>
-				<DialogTrigger asChild>
-					{children ? children :
-						<Button variant="outline">Trigger</Button>
-					}
-				</DialogTrigger>
-				<DialogContent className="sm:max-w-[425px]">
-					{/* <DialogHeader> */}
-					{/* <DialogTitle>Edit profile</DialogTitle> */}
-					{/* <DialogDescription>
-							Make changes to your profile here. Click save when you are done.
-						</DialogDescription> */}
-					{/* </DialogHeader> */}
-					{content ? content : <ProfileForm />}
-				</DialogContent>
-			</Dialog>
+
+			<div ref={setContainer} className="relative border ">
+				<Dialog open={open} onOpenChange={setOpen} >
+					<DialogTrigger asChild>
+						{children ? children :
+							<DialogTrigger><Button variant='outline'>Trigger Dialog</Button></DialogTrigger>
+						}
+					</DialogTrigger>
+
+					<DialogPortal container={container}>
+						<DialogOverlay />
+						<DialogContent id='dialog_content' className="">
+							<DialogDescription id="dialog_description">
+								{content ? content : <ProfileForm />}
+							</DialogDescription>
+						</DialogContent>
+
+
+					</DialogPortal>
+
+				</Dialog>
+
+
+			</div>
+
+
+
 		)
 	}
 
@@ -61,26 +86,20 @@ export function DrawerDialog({ children, data, content, className }: DrawerDialo
 		<Drawer open={open} onOpenChange={setOpen}>
 			<DrawerTrigger asChild>
 				{children ? children :
-					<Button variant="outline">Trigger Dialog</Button>
+					<Button variant="outline">Trigger Drawer</Button>
 
 				}
 			</DrawerTrigger>
 			<DrawerContent>
-				{/* <DrawerHeader className="text-left">
-					<DrawerTitle>Edit profile</DrawerTitle>
-					<DrawerDescription>
-						Make changes to your profile here. Click save when you are done.
-					</DrawerDescription>
-				</DrawerHeader> */}
+
 				{content ? content : <ProfileForm className="px-4" />}
-				{/* <ProfileForm className="px-4" /> */}
-				{/* <DrawerFooter className="pt-2"> */}
+
+
 				<DrawerClose asChild>
 					<Button variant="outline">Cancel</Button>
 				</DrawerClose>
-				{/* </DrawerFooter> */}
 			</DrawerContent>
-		</Drawer>
+		</Drawer >
 	)
 }
 

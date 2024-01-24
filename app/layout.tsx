@@ -29,12 +29,11 @@ export default function RootLayout({
 	return (
 		<html suppressHydrationWarning lang="en">
 			<body className={cn(
-				"min-h-screen relative  flex flex-col font-sans antialiased bg-gradient-to-br from-muted from-30%    to-muted/90 to-85% backdrop-blur-sm",
+				"min-h-screen relative  dark:bg-blend-multiply light:bg-blend-saturation flex flex-col font-sans antialiased bg-gradient-to-br dark:from-secondary dark:from-30 from-primary/20 from-30  to-green-500   dark:to-muted to-85 dark:backdrop-blur-sm",
 
 				fontSans.variable
 			)} >
 				<ThemeProvider attribute="class" enableSystem>
-					{/* <div id='cover' className="absolute inset-0 w-full h-full bg-accent -z-4 " /> */}
 					<NavBar />
 					<main className=" grow">
 						{children}

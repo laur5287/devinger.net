@@ -16,7 +16,7 @@ const Project = (props: ProjectProps) => {
 	return (
 		<div className="flex flex-col items-start justify-between w-full h-full ">
 
-			<div className={cn("relative min-w-full  text-6xl font-bold opacity-50  text-stroke min-h-[15%]", className)} data-text={name} id={name}>
+			<div className={cn("relative min-w-full  text-6xl font-bold opacity-50 text-transparent  text-stroke min-h-[15%]", className)} data-text={name} id={name}>{name}
 			</div>
 			<div className="flex justify-center gap-8 font-bold text-2xl backdrop-blur-sm   w-full  items-center  h-[15%]" id="tech">
 				{

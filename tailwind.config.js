@@ -23,7 +23,7 @@ module.exports = {
 				background: "hsl(var(--background)/<alpha-value>)",
 				foreground: "hsl(var(--foreground)/<alpha-value>)",
 				primary: {
-					DEFAULT: "hsl(var(--primary))",
+					DEFAULT: "hsl(var(--primary)/<alpha-value>)",
 					foreground: "hsl(var(--primary-foreground))",
 				},
 				secondary: {
@@ -57,6 +57,10 @@ module.exports = {
 				sm: "calc(var(--radius) - 4px)",
 			},
 			keyframes: {
+				ticker: {
+					'0%': { transform: 'translateX(200%)' },
+					'100%': { transform: 'translateX(-100%)' }
+				},
 				scale: {
 					'0%': { transform: 'scale(1)', animationTimingFunction: 'ease-out' },
 					'100%': { transform: 'scale(1.1)', animationTimingFunction: 'ease-in' },
@@ -84,6 +88,7 @@ module.exports = {
 				},
 			},
 			animation: {
+				"ticker": 'ticker 20s linear infinite',
 				"lift": "lift 0.8s forwards",
 				"scale": 'scale 1s ease-in-out both',
 				"accordion-down": "accordion-down 0.2s ease-out",

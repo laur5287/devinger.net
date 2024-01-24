@@ -46,7 +46,7 @@ export const CarouselExample = () => {
 				align: "center",
 				loop: true,
 			}}
-			className="relative max-w-2xl "
+			className="relative w-[90vw] max-w-2/3 mx-auto "
 			id='carousel'
 
 		>
@@ -58,11 +58,11 @@ export const CarouselExample = () => {
 							<Link href={project[1].link}  >
 								<Card id='card' className='border shadow-md flex-nowrap ' >
 
-									<CardContent id='card-content' className={`relative flex items-center justify-center aspect-square`}>
+									<CardContent id='card-content' className={`relative flex items-center justify-center w-full h-[50vh]`}>
 
 										<div className="absolute inset-0 w-full h-full -z-1 ">
 											<Image
-												className="group-hover:skew-x-3 group-hover:scale-[1.05]"
+												className="object-fill group-hover:opacity-80"
 												onError={(e) => console.error(e.target)}
 												fill src={project[1].image} alt={project[1].name} />
 										</div>
@@ -77,12 +77,12 @@ export const CarouselExample = () => {
 				))}
 
 			</CarouselContent>
-			<CarouselPrevious
+			<CarouselPrevious id="previous"
 				className='top-[50%] left-0 justify-center w-12 h-12  '
 			/>
 			<CarouselNext
 				id='next'
-				className='top-[50%] right-0 justify-center w-12 h-12  '
+				className='top-[50%] right-4 justify-center w-12 h-12  '
 			/>
 
 
