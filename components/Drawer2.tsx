@@ -133,8 +133,8 @@ function ProfileForm2({ className }: React.ComponentProps<"form">) {
 	}
 	return (
 
-		<Form {...form}>
-			<form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 ">
+		<Form  {...form}>
+			<form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 bg-red-600 ">
 				<FormField
 					control={form.control}
 					name="name"

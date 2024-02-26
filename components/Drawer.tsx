@@ -39,25 +39,27 @@ export function DrawerDialog({ children, data, content, className }: DrawerDialo
 	const [open, setOpen] = useState(false)
 	const [container, setContainer] = useState<HTMLDivElement | null>(null);
 	const isDesktop = useMediaQuery("(min-width: 768px)")
-	useEffect(() => {
-		console.log(isDesktop)
+	// useEffect(() => {
+	// 	console.log(isDesktop)
 
-	}, [isDesktop])
+	// }, [isDesktop])
 
-	useEffect(() => {
-		setContainer(document.body as HTMLDivElement | null); // Set the container to document.body or any other desired container
-		console.log(isDesktop);
-	}, [isDesktop]);
+	// useEffect(() => {
+	// 	setContainer(document.body as HTMLDivElement | null); // Set the container to document.body or any other desired container
+	// 	console.log(isDesktop);
+	// }, [isDesktop]);
 
 
 	if (isDesktop) {
 		return (
 
-			<div ref={setContainer} className="relative border ">
+			<div ref={setContainer} className="bg-background">
 				<Dialog open={open} onOpenChange={setOpen} >
 					<DialogTrigger asChild>
 						{children ? children :
-							<DialogTrigger><Button variant='outline'>Trigger Dialog</Button></DialogTrigger>
+							// <DialogTrigger>
+							<Button variant='outline'>Trigger Dialog</Button>
+							// </DialogTrigger>
 						}
 					</DialogTrigger>
 

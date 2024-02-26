@@ -8,6 +8,7 @@ import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
 import NavBar from '@/components/Navbar'
 import { Toaster } from '@/components/ui/toaster'
+import Script from 'next/script'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -29,13 +30,14 @@ export default function RootLayout({
 	return (
 		<html suppressHydrationWarning lang="en">
 			<body className={cn(
-				"min-h-screen relative   flex flex-col font-sans antialiased  from-secondary from-10% to-70% to-muted   bg-gradient-to-tr dark:from-muted dark:to-transparent ",
+				// from - secondary from - 10 % to - 70 % to - muted   bg - gradient - to - tr dark:from-muted dark:to-transparent
+				"min-h-screen relative   flex flex-col font-sans antialiased  ",
 
 				fontSans.variable
 			)} >
 				<ThemeProvider attribute="class" enableSystem>
-					<NavBar />
-					<main className=" grow">
+					{/* <NavBar /> */}
+					<main className="relative grow">
 						{children}
 
 					</main>
@@ -44,6 +46,7 @@ export default function RootLayout({
 					{/* <Reveal /> */}
 				</ThemeProvider>
 			</body>
+
 		</html>
 	)
 }
