@@ -21,7 +21,7 @@
     --warning: 45 100% 50%;
     --warning-foreground: 0 0% 100%;
 
-    --background: 210deg, 5%, 8%		
+    --background: 210deg, 5%, 8%;
     --foreground: 2deg, 0% 0%;
     --outline: hsl(0deg, 0%, 35%);
 
@@ -57,8 +57,7 @@
     --warning: 45 100% 50%;
     --warning-foreground: 0 0% 100%;
 
-    /* --background: 205deg 100% 6%; */
-    --background: 210deg, 5%, 8%		
+    --background: 210deg, 5%, 8%;
 
     --foreground: 0 0% 85%;
     --outline: hsl(0deg, 0%, 85%);
@@ -118,9 +117,9 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-[hsl(var(--background))] text-[hsl(var(--foreground))];
   }
-  /* #contact_section::before {
+  body::before {
     content: "";
     height: 100vh;
     width: 100vw;
@@ -133,5 +132,5 @@
     top: 0;
     z-index: -1;
     transform: translate3d(0, 0, -100vmin);
-  } */
+  }
 }

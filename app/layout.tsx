@@ -28,23 +28,23 @@ export default function RootLayout({
 }) {
 
 	return (
-		<html suppressHydrationWarning lang="en">
+		<html suppressHydrationWarning lang="en" className='dark'>
 			<body className={cn(
 				// from - secondary from - 10 % to - 70 % to - muted   bg - gradient - to - tr dark:from-muted dark:to-transparent
 				"min-h-screen relative   flex flex-col font-sans antialiased  ",
 
 				fontSans.variable
 			)} >
-				<ThemeProvider attribute="class" enableSystem>
-					{/* <NavBar /> */}
-					<main className="relative grow">
-						{children}
+				{/* <ThemeProvider attribute="class" enableSystem> */}
+				{/* <NavBar /> */}
+				<main className="relative grow">
+					{children}
 
-					</main>
-					<Toaster />
-					<TailwindIndicator />
-					{/* <Reveal /> */}
-				</ThemeProvider>
+				</main>
+				<Toaster />
+				<TailwindIndicator />
+				{/* <Reveal /> */}
+				{/* </ThemeProvider> */}
 			</body>
 
 		</html>

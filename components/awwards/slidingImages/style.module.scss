@@ -5,7 +5,7 @@
   flex-direction: column;
   gap: 3vw;
   position: relative;
-  background-color: #141516;
+  background-color: hsl(var(--background));
   z-index: 1;
   .slider {
     display: flex;
@@ -38,7 +38,7 @@
       width: 120%;
       left: -10%;
       border-radius: 0 0 50% 50%;
-      background-color: #141516;
+      background-color: hsl(var(--background));
       z-index: 1;
       position: absolute;
       box-shadow: 0px 60px 50px rgba(6, 2, 2, 0.3);
