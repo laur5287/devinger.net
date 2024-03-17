@@ -11,9 +11,9 @@ import { ButtonAceternity } from "@/components/aceternity/moving_border";
 
 const CallToAction = () => {
 	return (
-		<div id='cta' className="flex gap-2">
+		<div id='cta' className="flex gap-2 ">
 
-			<Link className={cn('font-bold', buttonVariants({ variant: "default", size: 'xl' }))
+			<Link className={cn('font-bold', buttonVariants({ size: 'xl' }))
 			} href='#projects_section' >Projects</Link>
 
 
@@ -24,7 +24,7 @@ const CallToAction = () => {
 				<DrawerDialog content={<ContactForm />}>
 
 
-					<Button size='xl'>Contact</Button>
+					<Button variant='noHover' size='xl'>Contact</Button>
 				</DrawerDialog >
 			</ButtonAceternity>
 		</div>

@@ -3,16 +3,17 @@ import { useRef } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import styles from './style.module.scss';
 import Image from 'next/image';
+import { Icons } from "@/components/Icons";
 
 const slider2 = [
 	{
 		color: "#e3e5e7",
 		src: "next.png"
 	},
-	{
-		color: "#d6d7dc",
-		src: "react.png"
-	},
+	// {
+	// 	color: "#d6d7dc",
+	// 	src: "tailwind-svgrepo-com(1).svg"
+	// },
 	{
 		color: "#e3e3e3",
 		src: "supabase.png"
@@ -57,11 +58,13 @@ export default function SlidingImages() {
 	return (
 		<div ref={container} className={styles.slidingImages}>
 			<motion.div style={{ x: x1 }} className={styles.slider}>
+				{/* <Icons.nextjs /> */}
 				{
 					slider2.map((project, index) => {
 						return <div key={index} className={styles.project}
 						// style={{ backgroundColor: project.color }}
 						>
+
 							<div className={styles.imageContainer}>
 								<Image
 									fill={true}

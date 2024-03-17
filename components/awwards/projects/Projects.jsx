@@ -14,13 +14,13 @@ const projects = [
 		title: "Blackjack",
 		src: "blackjack.webp",
 		color: "#000000",
-		badges: ['front-end'],
+		badges: ['react'],
 	},
 	{
 		title: "ChatYourFiles",
 		src: "chatgptYourFiles.webp",
 		color: "#8C8C8C",
-		badges: ['front-end'],
+		badges: ['gitHub'],
 	},
 	// {
 	// 	title: "TimeTracker",
@@ -100,7 +100,6 @@ export default function Projects() {
 									className={styles.modal}
 									style={{ backgroundColor: color }}
 									key={`modal_${index}`}
-									sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
 								>
 									<Image
 										src={`/projects_images/${src}`}
